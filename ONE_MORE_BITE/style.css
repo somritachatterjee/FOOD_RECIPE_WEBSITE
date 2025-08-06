@@ -1,0 +1,400 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif ;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background:#6b702b;
+}
+
+header{
+  height: 60px;
+  width: 100%;
+  background: #6b702b;
+  color: rgb(14, 14, 14);
+  display: flex;
+  align-items: center;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav-list {
+  display: none;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline;
+  margin-right: 20px;
+  font-weight: 550;
+}
+.logo{
+  font-size: 24px;
+  animation: fall-from-sky 2s ease-in-out infinite;
+}
+
+@keyframes fall-from-sky {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  background: url(kitchen.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 140px 0;
+  margin-bottom: 20px;
+}
+
+.hero h2{
+  font-size: 46px;
+  margin-bottom: 0px;
+  display: inline-block;
+ 
+}
+
+.hero p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search-box{
+  max-width: 550px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.search-box input{
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem; 
+  border: #8c1212;
+}
+
+.search-box button{
+
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 1rem; 
+  background: #8c1212;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ..............RECIPES.............. */
+
+.recipes{
+  padding: 50px 0;
+}
+.recipes h1{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+  50% {
+    transform: scale(1.08);
+    color: #e0e9c0;
+  }
+  100% {
+    transform: scale(1);
+    color: #8c1212;
+  }
+}
+
+.recipes-section{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 10px;
+}
+.recipes-card{
+  background: #e0e9c0;
+  margin: 30px 10px;
+  border-radius: 8px;
+  border : 1px solid rgb(240, 228, 205);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipes-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  animation: wipeIn 3s ease-in-out infinite;
+}
+
+@keyframes wipeIn {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+.recipes-card h2{
+  font-size: 22px;
+  padding: 20px;
+}
+.recipes-card p{
+  font-size: 18px;
+  padding: 20px;
+}
+.recipes-card a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #8c1212;
+  color: #fff;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+
+/*.............Portfolio...............*/
+
+.Portfolio{
+  padding: 0px 0;
+  background-color: black;
+}
+.Portfolio h1{
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 28px;
+  background-color: black;
+}
+
+.Portfolio-section{
+  width: 90%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 0px;
+
+}
+.Portfolio-card{
+  background: black;
+  background-size: cover the body;
+  margin: 0px 0px;
+  border-radius: 0 px;
+  border : 1px solid black;
+  border-right: black;
+  border-bottom-right-radius: 0%;
+  overflow: hidden;
+  padding: 0px;
+  animation: fall-from-sky 2s ease-in-out infinite;
+}
+
+@keyframes fall-from-sky {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+.Portfolio-card img{
+  width: 110%;
+  height: 400px;
+  object-fit: cover;
+  background: black;
+  margin-right: 0px;
+  margin-left: 0px;
+  align-items: center;
+  
+}
+.Portfolio-card h2{
+  font-size: 32px;
+  padding: 20px;
+  color:white;
+}
+.Portfolio-card p{
+  font-size: 18px;
+  padding: 20px;
+color: wheat;
+}
+
+
+/*...............footer..................*/
+
+
+/* Footer Base Styling */
+footer {
+  background-color: black;
+  color: wheat;
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Footer Container Grid */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Section Headings */
+.footer-section h3 {
+  margin-bottom: 15px;
+  color:   #8c1212;
+  font-size: 20px;
+}
+
+/* About Text */
+.footer-section.about p {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Quick Links */
+.footer-section.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+  text-decoration: none;
+  color: wheat;
+  transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+  color:  #8c1212;
+}
+
+/* Newsletter Signup */
+.footer-section.newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section.newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-section.newsletter button {
+  padding: 10px;
+  background-color:  #8c1212;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.footer-section.newsletter button:hover {
+  background-color:  #8c1212;
+}
+
+/* Social Icons */
+.footer-section.social .social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  width: 32px;
+  height: auto;
+}
+
+.footer-section.social img {
+  width: 224px;
+  height: 94px;
+  transition: transform 0.3s ease;
+}
+
+.footer-section.social img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+
+/*............MEDIA QUERIES...............*/
+
+@media only screen and (max-width: 768px)
+ {
+       .menu-icon {
+        display : none;
+      }
+
+        .nav-list {
+          display: block;
+        }
+
+}  
+
+@media only screen and (max-width: 768px) {
+       .hero h2{
+        font-size: 28px;
+      }
+        .hero p{
+          font-size: 15px;
+        }
+      }              
